@@ -1,18 +1,23 @@
 import React from "react";
 import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
 import { promises as fs } from 'fs';
-
+import {tiedot} from "./testi.js"
 
 export default async function Grammar() {
     const res = await fs.readFile(process.cwd() + "/app/grammar/grammar.json", "utf-8")
     const grammarData = JSON.parse(res);
     // console.log(grammarData)
+    // console.log(grammarData[0].content)
+    console.log(tiedot[1].content)
 
+    const kokeilu = "<br>apina ja <i>gorilla</i>"
+    const seuraava = {__html:kokeilu};
     return (
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        {grammarData.map((card) =>         
-        <Card 
+        {tiedot.map((card) =>      
+        <Card
+        key="{card}" 
         className="bg-zinc-500 max-w-[400px] p-10 my-10 rounded-xl"
         shadow="lg"
         fullWidth="true">
@@ -23,7 +28,7 @@ export default async function Grammar() {
       </CardHeader>
       <Divider/>
       <CardBody>
-        <p>{card.content}</p>
+        <p dangerouslySetInnerHTML={{__html:card.content}}></p>
       </CardBody>
       <Divider/>
     </Card>)}
