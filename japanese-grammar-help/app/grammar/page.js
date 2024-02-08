@@ -4,12 +4,9 @@ import React from "react";
 import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
 import {tiedot} from "./testi.js"
 
-// className="md:hidden" tällä saa piiloon elementin
-
 export default async function Grammar() {
     const toggleCard = function(e){
         const toggle = e.target.querySelector(".toggleThis")
-        // console.log(toggle)
         toggle.classList.toggle("hidden")
 
     }
@@ -33,7 +30,7 @@ export default async function Grammar() {
       </CardHeader>
       <Divider />
       <CardBody className="toggleThis hidden">
-        <p dangerouslySetInnerHTML={{__html:card.content}}></p>
+        <p className="text-left" dangerouslySetInnerHTML={{__html:card.content}}></p>
       </CardBody>
     </Card>)}
 

@@ -26,15 +26,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/* .card {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 7px;
-  background-color: rgb(195, 195, 195);
-  color:black
-} */
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
