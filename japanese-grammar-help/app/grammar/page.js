@@ -10,29 +10,31 @@ export default async function Grammar() {
         toggle.classList.toggle("hidden")
 
     }
-
+// Alkuperäinen kortti bg-zinc-500
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between font-mono text-sm">
-        {tiedot.map((card) =>      
-        <Card
+        {tiedot.map((card) => (
+            card.title == "chapterLabel"     
+        ? (<h1 className="w-3/4 text-teal-500 text-lg font-bold text-left">{card.content}</h1>)
+        : (<Card
         key={card.title}
-        className="bg-zinc-500 w-3/4 p-10 my-10 rounded-xl"
+        className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
         shadow="lg"
         fullWidth="true"
         isPressable onPress={(e) => toggleCard(e)}
         disableRipple="true">
       <CardHeader className="flex gap-3">
         <div className="flex w-full gap-3 justify-between">
-          <p className="flex text-black-500 font-bold text-lg">{card.title}</p>
-          <p className="flex">Klikkaa</p>
+          <p className="flex text-teal-50 font-bold text-lg">{card.title}</p>
+          <p className="invisible md:visible flex text-teal-100">Klikkaa</p>
         </div>
       </CardHeader>
       <Divider />
       <CardBody className="toggleThis hidden">
-        <p className="text-left" dangerouslySetInnerHTML={{__html:card.content}}></p>
+        <p className="text-left text-teal-50" dangerouslySetInnerHTML={{__html:card.content}}></p>
       </CardBody>
-    </Card>)}
+    </Card>)))}
 
         </div>
       </main>

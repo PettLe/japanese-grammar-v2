@@ -1,4 +1,6 @@
 const tiedot = [
+    {"title": "chapterLabel",
+    "content": "Kappale 1"},
     {"title": "~てから / ~te kara / tapahtumajärjestys",
     "content": `<br><strong><i>! Jos te-muoto ei ole enää tuoreessa mielessä, katso Kappale 4 - Verbien mennyt aika (+ TE-MUOTO)</i></strong><br>Tapahtumaketjuja voi 
     kuvata käyttämällä verbin te-muotoa.<br>明日、公園に<strong>行って</strong>、コーヒーを飲みます。<br><i>Ashita, kouen ni itte, koohii wo nomimasu.</i><br>Huomenna 
@@ -38,6 +40,8 @@ const tiedot = [
         <br>危ない場所に<strong>行ってはだめ</strong>よ。
         <br><i>Abunai basho ni itte wa dame yo.</i>
         <br>Vaarallisiin paikkoihin ei pidä mennä!`},
+        {"title": "chapterLabel",
+    "content": "Kappale 2"},
     {"title": "Adjektiivien luetteleminen",
         "content": `Tapa jolla adjektiivit yhdistetään riippuu siitä ovatko ne i- vai na-adjektiiveja. Jos kyseessä on i-adjektiivi, putoaa viimeinen い pois
         ja sen tilalle tulee ~<strong>くて</strong>. Jos kyseessä on na-adjektiivi, korvataan な hiraganalla <strong>で</strong>. Viimeistä adjektiivia ei enää 
