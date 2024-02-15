@@ -2,7 +2,8 @@
 
 import React from "react";
 import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
-import {tiedot} from "./testi.js"
+import {data} from "./grammarData.js"
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
 
 export default async function Grammar() {
     const toggleCard = function(e){
@@ -14,7 +15,7 @@ export default async function Grammar() {
     return (
       <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between font-mono text-sm">
-        {tiedot.map((card) => (
+        {data.map((card) => (
             card.title == "chapterLabel"     
         ? (<h1 className="w-3/4 text-teal-500 text-lg font-bold text-left">{card.content}</h1>)
         : (<Card
