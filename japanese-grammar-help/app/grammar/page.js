@@ -3,7 +3,7 @@
 import React from "react";
 import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
 import {data} from "./grammarData.js"
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
+
 
 export default async function Grammar() {
     const toggleCard = function(e){

@@ -310,7 +310,7 @@ const data = [
           <br><i>shimasu</i></td>
             <td class="w-1/3 text-left py-3 px-4"><strong>する</strong>
               <br><i>suru</i></td>
-            <td> class="text-left py-3 px-4"<strong>しない</strong>
+            <td class="text-left py-3 px-4"><strong>しない</strong>
               <br><i>shinai</i></td>
             <td class="text-left py-3 px-4"><i>tehdä</i></td>
           </tr>
