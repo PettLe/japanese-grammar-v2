@@ -1,9 +1,14 @@
 "use client"
 
 import {Image} from "@nextui-org/react";
+import handleClick from "./testaus";
+
+// import { useState } from 'react'
+// import { useRouter } from 'next/navigation'
 
 export default async function Home() {
-    
+    // const router = useRouter()
+    // const [word, setWord] = useState('');
     // Fetch API-kutsu, jolla haetaan satunnainen japaninkielinen sana
     let randomWord = await fetch(`https://jlpt-vocab-api.vercel.app/api/words/random`, { cache: 'no-store' }).then((response) => {
         return response.json();
@@ -12,6 +17,11 @@ export default async function Home() {
         return data;
     })
 
+    // const handleClick = async function(e) {
+    //   // router.reload();
+    //   console.log("Jebou klikkaus")
+    //   console.log(e)
+    // }
     const generateNewWord = function(e){
       console.log("CLICK")
       const word = e.target.querySelector(".word")
@@ -30,7 +40,9 @@ export default async function Home() {
       <br />
     <p className="word">Sana: {randomWord.word} ({randomWord.furigana})</p>
     <p className="meaning">Merkitys: {randomWord.meaning}</p>
-    <button onClick={(e) => generateNewWord(e)} className="bg-transparent hover:bg-teal-100 text-teal-100 font-semibold hover:text-black py-2 px-4 border border-teal-100 hover:border-transparent rounded">Arvo uusi sana</button>
+    <form action={handleClick}>
+    <button type="submit" className="bg-transparent hover:bg-teal-100 text-teal-100 font-semibold hover:text-black py-2 px-4 border border-teal-100 hover:border-transparent rounded">Arvo uusi sana</button>
+    </form>
     </div>
       </div>
       <Image className="rounded-xl"
