@@ -1,7 +1,7 @@
 "use client"
 
 import {Image} from "@nextui-org/react";
-import handleClick from "./testaus";
+import handleClick from "./clickFunction";
 
 // import { useState } from 'react'
 // import { useRouter } from 'next/navigation'

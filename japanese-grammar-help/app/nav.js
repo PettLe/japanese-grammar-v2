@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Navbar() {
-    const linkit = [{teksti: "Etusivu", osoite: "/"}, {teksti: "Kielioppi", osoite: "/grammar"}, {teksti: "Sanakirja", osoite: "/dictionary"}, {teksti: "Linkkejä", osoite: "/links"}]
+    const linkit = [{teksti: "Etusivu", osoite: "/"}, {teksti: "Kielioppi", osoite: "/grammar"}, {teksti: "Harjoituksia", osoite: "/exercises"}, {teksti: "Linkkejä", osoite: "/links"}]
 
     return (
       <div className="bg-neutral-950 flex flex-col w-full items-center">
