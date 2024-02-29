@@ -31,10 +31,10 @@ export default async function Home() {
   }
 
   return (
-    <main className="bg-neutral-950 text-teal-100 flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="bg-neutral-950 text-teal-100 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <div className="flex-column">
-      <h1 className="text-lg animate-bounce">Terve</h1>
+      <h1 className="text-lg text-orange-400 animate-bounce">Terve</h1>
       <p>Teretulemast oppimaan japanin kielioppia ja sellasta, ehkä joku parempi teksti tähän hei myöhemmin.</p>
       <div className="my-5"><h3>Ennen kuin jatkat, ota matkaasi uusi sana!</h3>
       <br />

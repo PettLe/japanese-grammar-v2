@@ -4,6 +4,7 @@ import React from "react";
 import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
 import {data} from "./grammarData.js"
 import { useState } from 'react'
+import BackToTopBtn from "../topButton.js";
 
 export default function Grammar() { //aikaisemmin oli async-funktio, älä unohda
     const [query, setQuery] = useState('');
@@ -24,14 +25,14 @@ export default function Grammar() { //aikaisemmin oli async-funktio, älä unohd
 
   
     return (
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-5 md:p-24 rounded-b-lg">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between font-mono text-sm">
-          <div className="w-3/4 text-teal-500 text-lg font-bold text-left">
+          <div className="w-3/4 text-teal-500 text-lg font-bold text-center md:text-left">
         <input className="p-50 text-slate-900 self-start" onChange={handleChange} type="text" placeholder="Etsi.."/>
         </div>
         {filtered.map((card) => (
             card.title == "chapterLabel"     
-        ? (<h1 className="w-3/4 text-teal-500 text-lg font-bold text-left">{card.content}</h1>)
+        ? (<h1 className="w-3/4 text-teal-500 text-center md:text-start text-lg font-bold">{card.content}</h1>)
         : (<Card
         key={card.title}
         className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
@@ -52,6 +53,7 @@ export default function Grammar() { //aikaisemmin oli async-funktio, älä unohd
     </Card>)))}
 
         </div>
+        {BackToTopBtn()}
       </main>
     );
   }

@@ -3,6 +3,7 @@
 import React from "react";
 import {Card, CardHeader, CardBody, Divider, CardFooter} from "@nextui-org/react";
 import { harjoitukset } from "./harjoitusData";
+import BackToTopBtn from "../topButton";
 
 export default function Exercises() {
     const toggleAnswer = function(e){
@@ -12,7 +13,7 @@ export default function Exercises() {
     }
 
     return (
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
         <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <h1 className="text-slate-50 text-lg p-5 my-5">Harjoituksia</h1>
         <h2>Tehtävät on jaettu kolmeen osaan kielioppiasioiden mukaisessa järjestyksessä. Lopussa vastaukset voi paljastaa klikkaamalla.</h2>
@@ -44,6 +45,7 @@ export default function Exercises() {
             ))}
     </div>
         </div>
+        {BackToTopBtn()}
       </main>
     );
   }
