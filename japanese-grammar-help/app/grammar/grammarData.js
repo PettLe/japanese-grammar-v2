@@ -1,3 +1,4 @@
+//  Kielioppi-seikat ovat arrayhin lisättyjä objekteja.
 const data = [
     {"title": "chapterLabel",
     "content": "Kappale 1"},

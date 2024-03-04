@@ -1,3 +1,4 @@
+// Harjoitukset ovat arrayhin lisättyjä objekteja
 let harjoitukset = [{"otsikko": "Kappale 1",
                     "teht": `
                     <br>1a. 宿題を__________遊びに行きます。(終える おえる viimeistellä / saattaa päätökseen)

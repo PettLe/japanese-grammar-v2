@@ -1,5 +1,5 @@
 export default function BackToTopBtn() {
-    const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+    const isBrowser = () => typeof window !== 'undefined'; // Next.js:n suosittelema lähestymistapa
 
     function scrollToTop() {
         if (!isBrowser()) return;

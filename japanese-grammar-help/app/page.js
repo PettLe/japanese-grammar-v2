@@ -3,13 +3,8 @@
 import {Image} from "@nextui-org/react";
 import handleClick from "./clickFunction";
 
-// import { useState } from 'react'
-// import { useRouter } from 'next/navigation'
-
 export default async function Home() {
-    // const router = useRouter()
-    // const [word, setWord] = useState('');
-    // Fetch API-kutsu, jolla haetaan satunnainen japaninkielinen sana
+    // Fetch API-kutsu, jolla haetaan satunnainen japaninkielinen sana ulkoisesta lähteestä
     let randomWord = await fetch(`https://jlpt-vocab-api.vercel.app/api/words/random`, { cache: 'no-store' }).then((response) => {
         return response.json();
     }).then((data) => {
@@ -17,25 +12,23 @@ export default async function Home() {
         return data;
     })
 
-    // const handleClick = async function(e) {
-    //   // router.reload();
-    //   console.log("Jebou klikkaus")
-    //   console.log(e)
-    // }
     const generateNewWord = function(e){
       console.log("CLICK")
       const word = e.target.querySelector(".word")
       const meaning = e.target.querySelector(".meaning")
       console.log(word + " " + meaning)
-      // toggle.classList.toggle("hidden")
+  //     // toggle.classList.toggle("hidden")
   }
 
   return (
     <main className="bg-neutral-950 text-teal-100 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="flex-column">
-      <h1 className="text-lg text-orange-400 animate-bounce">Terve</h1>
-      <p>Teretulemast oppimaan japanin kielioppia ja sellasta, ehkä joku parempi teksti tähän hei myöhemmin.</p>
+      <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
+        <div className="flex-column w-full md:w-3/4 p-5">
+      <h1 className="text-lg text-orange-400 animate-bounce">Tervetuloa</h1>
+      <p>Tämä sivusto on tarkoitettu meidän omalle japaninkurssin ryhmälle (tiedätte kyllä keitä olette, ystävät!) Täältä löytyy tärkeimmät
+        käsittelemämme kielioppiasiat tähän mennessä. Jos etit jotain spesifiä, voit turvautua kielioppi-osion hakuun. Sivustolta löytyy myös
+        harjoitustehtäviä ja linkkejä hyödyllisille sivustoille! 頑張ってね！
+      </p>
       <div className="my-5"><h3>Ennen kuin jatkat, ota matkaasi uusi sana!</h3>
       <br />
     <p className="word">Sana: {randomWord.word} ({randomWord.furigana})</p>
