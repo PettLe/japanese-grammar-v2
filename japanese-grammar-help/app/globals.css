@@ -29,6 +29,9 @@ body {
   }
 }
 
+.material-symbols-outlined {
+  font-size: 48px !important;
+}
 
 @layer utilities {
   .text-balance {

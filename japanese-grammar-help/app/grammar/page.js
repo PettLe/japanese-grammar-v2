@@ -32,13 +32,13 @@ export default function Grammar() {
       <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-5 md:p-24 rounded-b-lg">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm">
           <div className="w-3/4 text-teal-500 text-lg font-bold text-center md:text-left">
-        <input className="p-50 text-slate-900 self-start" onChange={handleChange} type="text" placeholder="Etsi.."/>
+        <input className="p-50 text-slate-900 my-5 self-start" onChange={handleChange} type="text" placeholder="Etsi.."/>
         </div>
         {/* Mapin avulla käydään läpi filtteröity kielioppi-data yksi kohta kerrallaan ja renderöidään sen pohjalta kortit */}
         {filtered.map((card) => (
           // jos kortin title on "chapterLabel", siitä renderöidään otsikko. Muussa tapauksessa tehdään kortti.
             card.title == "chapterLabel"     
-        ? (<h1 className="w-3/4 text-teal-500 text-center md:text-start text-lg font-bold">{card.content}</h1>)
+        ? (<h1 className="w-3/4 text-orange-400 text-center md:text-start text-lg font-bold">{card.content}</h1>)
         : (<Card
         key={card.title}
         className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
@@ -49,7 +49,9 @@ export default function Grammar() {
       <CardHeader className="flex gap-3">
         <div className="flex w-full gap-3 justify-between">
           <p className="flex text-teal-50 font-bold text-lg">{card.title}</p>
-          <p className="invisible md:visible flex text-teal-100">Klikkaa</p>
+          <p className="invisible md:visible flex text-teal-100 md:transition ease-in-out delay-100 
+            hover:-translate-y-1 hover:scale-110 text-teal-100 hover:text-teal-500
+            duration-300">Klikkaa</p>
         </div>
       </CardHeader>
       <Divider />
