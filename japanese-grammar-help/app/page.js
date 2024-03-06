@@ -2,45 +2,18 @@
 
 import {Image} from "@nextui-org/react";
 import { useState, useEffect } from 'react'
-// import bringRndmWord from "./clickFunction";
 
 export default function Home() {
     const [query, setQuery] = useState({"word": "", "meaning": "", "furigana": ""});
-  
-    // const [query, setQuery] = useState("");
-    // console.log(query)
-
-    // Fetch API-kutsu, jolla haetaan satunnainen japaninkielinen sana ulkoisesta lähteestä
-    // let randomWord = await fetch(`https://jlpt-vocab-api.vercel.app/api/words/random`, { cache: 'no-store' }).then((response) => {
-    //     return response.json();
-    // }).then((data) => {
-    //     // console.log(data)
-    //     // setQuery(data)
-    //     console.log("TÄSSÄ TULEE QUERY")
-    //     console.log(query)
-    //     return data;
-    // })
 
 
   const handleClick = async function () {
     const res = await fetch(`https://jlpt-vocab-api.vercel.app/api/words/random`, { cache: 'default' }).then((response) => {
     return response.json();
 }).then((data) => {
-    // console.log(data)
-    // setQuery(data)
-    // console.log("TÄSSÄ TULEE QUERY")
-    // console.log(query)
-    // console.log("bringRndmWord clicked!")
-    // console.log(data)
-    // let test = "123456789"
     return data;
 })
-    // console.log("Testitesti")
-    // const randomWord = {"word": "UUSISANA", "meaning": "UUSIMERKITYS", "furigana": "UUSIFURIGANA"}
-    // let randomWord = await bringRndmWord()
     setQuery({"word": res.word, "meaning": res.meaning, "furigana": res.furigana})
-    // console.log(query)
-    // console.log(randomWord)
   }
     useEffect(() => {handleClick})
 
