@@ -3,7 +3,7 @@ import {Link} from "@nextui-org/react";
 
 export default function Links() {
     return (
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
+      <main className="bg-neutral-950 flex min-h-[calc(100vh-114px)] flex-col items-center justify-between p-24 rounded-b-lg">
         <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
         <h1 className="text-slate-50 text-lg p-5 my-5">Täältä löytyy erilaisia hyödyllisiä linkkejä tukemaan opiskelua</h1>
         <div className="flex w-full place-items-center"><Link className="text-lg w-1/2 md:w-1/3 text-orange-400 mx-5 hover:text-teal-500" href="https://www3.nhk.or.jp/news/easy/" isExternal>NHK Easier</Link><p className="text-slate-50 w-1/2 md:w-2/3 text-md">Japanin yleisradion helpommalla kielellä kirjoitettu uutissivusto</p></div>
