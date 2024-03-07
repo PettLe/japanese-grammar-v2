@@ -15,12 +15,12 @@ export default function Exercises() {
 
     return (
       <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
-        <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
+        <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between text-sm md:text-base lg:flex">
         <h1 className="text-slate-50 text-lg p-5 my-5">Harjoituksia</h1>
-        <h2>Tehtävät on jaettu kolmeen osaan kielioppiasioiden mukaisessa järjestyksessä. Lopussa vastaukset voi paljastaa klikkaamalla.</h2>
+        <h2>Tehtävät ovat jaettuna osiin kielioppiasioiden mukaisessa järjestyksessä. Lopussa vastaukset voi paljastaa klikkaamalla.</h2>
         
             {/* Map-funktio käy jokaisen importatun harjoitustehtävän läpi ja generoi kortit niille */}
-            <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm">
+            <div className="flex flex-col z-10 w-5xl w-full items-center justify-between">
             {harjoitukset.map((harjoitus) => (
             ((<Card
                 key={harjoitus.teht}

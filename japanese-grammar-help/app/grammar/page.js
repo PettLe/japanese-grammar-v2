@@ -29,10 +29,14 @@ export default function Grammar() {
 
   
     return (
+      <html>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,0" />
+      </head>
       <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-5 md:p-24 rounded-b-lg">
-        <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm">
+        <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm md:text-base">
           <div className="w-3/4 text-teal-500 text-lg font-bold text-center md:text-left">
-        <input className="p-50 text-slate-900 my-5 self-start" onChange={handleChange} type="text" placeholder="Etsi.."/>
+        <input className="p-50 text-slate-900 my-5 self-start rounded-md" onChange={handleChange} type="text" placeholder="Etsi..."/>
         </div>
         {/* Mapin avulla käydään läpi filtteröity kielioppi-data yksi kohta kerrallaan ja renderöidään sen pohjalta kortit */}
         {filtered.map((card) => (
@@ -44,14 +48,16 @@ export default function Grammar() {
         className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
         shadow="lg"
         fullWidth="true"
-        isPressable onPress={(e) => toggleCard(e)}
+        isPressable onPress={(e) => toggleCard(e)} // event handler kortin toggleamiseen auki ja kiinni
         disableRipple="true">
       <CardHeader className="flex gap-3">
         <div className="flex w-full gap-3 justify-between">
-          <p className="flex text-teal-50 font-bold text-lg">{card.title}</p>
-          <p className="invisible md:visible flex text-teal-100 md:transition ease-in-out delay-100 
+          <p className="flex text-teal-50 font-bold text-lg items-center">{card.title}</p>
+          <p className="invisible md:visible flex text-teal-100 md:transition ease-in-out delay-75 
             hover:-translate-y-1 hover:scale-110 text-teal-100 hover:text-teal-500
-            duration-300">Klikkaa</p>
+            duration-200 items-center"><span class="material-symbols-outlined">
+            arrow_drop_down
+            </span>Avaa / sulje</p>
         </div>
       </CardHeader>
       <Divider />
@@ -64,6 +70,7 @@ export default function Grammar() {
         {/* Muualta importattu Back to the Top -button */}
         {BackToTopBtn()}
       </main>
+      </html>
     );
   }
   
