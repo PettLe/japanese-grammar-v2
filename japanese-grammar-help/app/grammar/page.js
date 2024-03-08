@@ -25,7 +25,7 @@ export default function Grammar() {
     
     // päivitetään State sen mukaan mitä hakukenttään on kirjoitettu
     const handleChange = (e) => {
-      setQuery(e.target.value)
+      setQuery(e.target.value.toLowerCase())
       }
 
   
