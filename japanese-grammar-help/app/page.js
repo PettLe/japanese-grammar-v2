@@ -21,7 +21,7 @@ export default function Home() {
     useEffect(() => {handleClick})
 
   return (
-    <main className="bg-neutral-950 text-teal-100 flex min-h-[calc(100vh-114px)] flex-col items-center justify-between p-24 rounded-b-lg gap-y-14">
+    <main className="bg-neutral-950 text-teal-100 flex min-h-[calc(100vh-114px)] flex-col items-center justify-between p-3 md:p-24 rounded-b-lg gap-y-14">
       <div className="z-10 max-w-5xl w-full items-center justify-between text-sm md:text-base lg:flex">
         <div className="flex-column w-full md:w-3/4 p-5">
       <h1 className="text-lg text-orange-400 text-xl animate-bounce">Tervetuloa</h1>

@@ -136,7 +136,8 @@ const data = [
     <br>Kielteinen perustyyli: viimeisen tavun a-loppuinen vastine + ない
     <br>! Jos verbi loppuu pelkkä う perusmuodossaan, niin kielteisessä perusmuodossa tulee <strong>わ</strong> eikä あ  
     <br><br>
-     <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+    <div style="overflow-x:auto;">
+     <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
       <thead class="bg-gray-800 text-white">
         <tr>
           <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">ます-muoto</th>
@@ -240,12 +241,14 @@ const data = [
         </tr>                                                                                                                                                
       </tbody>
     </table>
+    </div>
     <br>
     <strong>Ryhmä 2:</strong>
     <br>Perustyyli: ます-pääte korvaantuu tavulla <strong>る</strong>
     <br>Kielteinen perustyyli: Korvataan verbin pääte päätteellä <strong>ない</strong>
     <br><br>
-    <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+    <div style="overflow-x:auto;">
+    <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
       <thead class="bg-gray-800 text-white">
         <tr>
           <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">ます-muoto</th>
@@ -293,10 +296,12 @@ const data = [
         </tr>
       </tbody>
       </table>
+      </div>
       <br>
       <strong>Epäsäännölliset + です:</strong>
       <br><br>
-      <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+      <div style="overflow-x:auto;">
+      <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
         <thead class="bg-gray-800 text-white">
           <tr>
             <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">ます-muoto</th>
@@ -334,7 +339,8 @@ const data = [
             <td class="text-left py-3 px-4"><i>olla kyseessä</i></td>
           </tr>
       </tbody>
-      </table> `},
+      </table> 
+      </div>`},
     {"title": "ので / node / Koska-rakenne",
 "content": `<strong>Verbit ja i-adjektiivit</strong>
 <br>Perustyylissä. Verbit ja adjektiivit voivat olla kielteisessä, myönteisessä sekä menneessä muodossa.
@@ -418,7 +424,8 @@ ammatit, vuodenajat, ikä, ominaisuus, ajan muutos työstä lomaksi jne.
   <br>Ensimmäisen ryhmän perustyylisissä verbeissä menneen ajan pääte riippuu täysin siitä millä tavulla verbi loppuu. Nämä on vain opeteltava. 
   <br>! Jos verbi loppuu pelkkä う perusmuodossaan, niin kielteisessä perusmuodossa tulee <strong>わ</strong> eikä あ  
   <br><br>
-   <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+  <div style="overflow-x:auto;">
+   <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
     <thead class="bg-gray-800 text-white">
       <tr>
         <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">perusmuoto</th>
@@ -522,10 +529,12 @@ ammatit, vuodenajat, ikä, ominaisuus, ajan muutos työstä lomaksi jne.
       </tr>                                                                                                                                                
     </tbody>
   </table>
+  </div>
   <br>
   <strong>Ryhmä 2:</strong>
   <br><br>
-  <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+  <div style="overflow-x:auto;">
+  <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
     <thead class="bg-gray-800 text-white">
       <tr>
         <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">perusmuoto</th>
@@ -573,10 +582,12 @@ ammatit, vuodenajat, ikä, ominaisuus, ajan muutos työstä lomaksi jne.
       </tr>
     </tbody>
     </table>
+    </div>
     <br>
     <strong>Epäsäännölliset + です:</strong>
     <br><br>
-    <table class="min-w-full bg-white shadow overflow-hidden rounded border-b border-gray-200">
+    <div style="overflow-x:auto;">
+    <table class="table-auto w-full bg-white shadow overflow-scroll rounded border-b border-gray-200">
       <thead class="bg-gray-800 text-white">
         <tr>
           <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">perusmuoto</th>
@@ -614,7 +625,8 @@ ammatit, vuodenajat, ikä, ominaisuus, ajan muutos työstä lomaksi jne.
           <td class="text-left py-3 px-4"><i>olla kyseessä</i></td>
         </tr>
     </tbody>
-    </table>`},
+    </table>
+    </div>`},
     {"title": "~んです / ~n desu / selittävä lauserakenne",
 "content": `Kun tahdotaan selittää jotain - tai kysyä jostain tarkempaa selitystä odottaen - käytetään <strong>~んです</strong> -rakennetta. Ei kuitenkaan käytetä silloin,
 kun todetaan / halutaan tietää vain yksinkertaisia faktoja. Esimerkiksi kyllä/ei -kysymykset.

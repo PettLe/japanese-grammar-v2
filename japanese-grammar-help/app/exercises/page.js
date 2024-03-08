@@ -14,7 +14,7 @@ export default function Exercises() {
     }
 
     return (
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-3 md:p-24 rounded-b-lg">
         <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between text-sm md:text-base lg:flex">
         <h1 className="text-slate-50 text-lg p-5 my-5">Harjoituksia</h1>
         <h2>Tehtävät ovat jaettuna osiin kielioppiasioiden mukaisessa järjestyksessä. Lopussa vastaukset voi paljastaa klikkaamalla.</h2>
@@ -24,7 +24,7 @@ export default function Exercises() {
             {harjoitukset.map((harjoitus) => (
             ((<Card
                 key={harjoitus.teht}
-                className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
+                className="bg-slate-800 w-full md:w-3/4 px-2 py-2 md:p-10 my-10 rounded-xl"
                 shadow="lg"
                 isPressable onPress={(e) => toggleAnswer(e)} 
                 fullWidth="true"

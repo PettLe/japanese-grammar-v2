@@ -30,7 +30,7 @@ export default function Grammar() {
 
   
     return (
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-3 md:p-24 rounded-b-lg">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm md:text-base">
           <div className="w-3/4 text-teal-500 text-lg font-bold text-center md:text-left">
         <input className="p-50 text-slate-900 my-5 self-start rounded-md" onChange={handleChange} type="text" placeholder="Etsi..."/>
@@ -42,7 +42,7 @@ export default function Grammar() {
         ? (<h1 className="w-3/4 text-orange-400 text-center md:text-start text-lg font-bold">{card.content}</h1>)
         : (<Card
         key={card.title}
-        className="bg-slate-800 w-full md:w-3/4 p-10 my-10 rounded-xl"
+        className="bg-slate-800 w-full md:w-3/4 px-2 py-2 md:p-10 my-10 rounded-xl"
         shadow="lg"
         fullWidth="true"
         isPressable onPress={(e) => toggleCard(e)} // event handler kortin toggleamiseen auki ja kiinni
@@ -59,7 +59,7 @@ export default function Grammar() {
       </CardHeader>
       <Divider />
       <CardBody className="toggleThis hidden">
-        <p className="text-left text-teal-50" dangerouslySetInnerHTML={{__html:card.content}}></p>
+        <p className="text-left text-teal-50 w-full" dangerouslySetInnerHTML={{__html:card.content}}></p>
       </CardBody>
     </Card>)))}
 
