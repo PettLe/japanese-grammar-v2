@@ -5,6 +5,7 @@ import {Card, CardHeader, CardBody, Divider} from "@nextui-org/react";
 import {data} from "./grammarData.js"
 import { useState } from 'react'
 import BackToTopBtn from "../topButton.js";
+import "../globalicon.css";
 
 export default function Grammar() {
   // Reactin State Hook mahdollistaa staten lisäämisen funktion komponentteihin ilman erillisen Classin luomista
@@ -29,11 +30,7 @@ export default function Grammar() {
 
   
     return (
-      <html>
-      <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,0" />
-      </head>
-      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-5 md:p-24 rounded-b-lg">
+      <main className="bg-neutral-950 flex min-h-screen flex-col items-center justify-between p-24 rounded-b-lg">
         <div className="flex flex-col z-10 w-5xl w-full items-center justify-between text-sm md:text-base">
           <div className="w-3/4 text-teal-500 text-lg font-bold text-center md:text-left">
         <input className="p-50 text-slate-900 my-5 self-start rounded-md" onChange={handleChange} type="text" placeholder="Etsi..."/>
@@ -70,7 +67,6 @@ export default function Grammar() {
         {/* Muualta importattu Back to the Top -button */}
         {BackToTopBtn()}
       </main>
-      </html>
     );
   }
   
